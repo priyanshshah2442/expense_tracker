@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:EXP-{MM}-{####}",
+ "creation": "2024-01-05 11:23:17.673193",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_px7l",
+  "expense_type",
+  "expense_name",
+  "amount",
+  "date",
+  "mode_of_payment",
+  "receipt",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_px7l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "expense_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Expense Type",
+   "link_filters": "[[{\"fieldname\":\"expense_type\",\"field_option\":\"Categories\"},\"is_group\",\"=\",1],[{\"fieldname\":\"expense_type\",\"field_option\":\"Categories\"},\"name\",\"!=\",\"Main_Categories\"]]",
+   "options": "Categories",
+   "reqd": 1
+  },
+  {
+   "depends_on": "expense_type",
+   "fieldname": "expense_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Expense Name",
+   "options": "Categories",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Select",
+   "label": "Mode of Payment",
+   "options": "PhonePe\nGoogle Pay\nBank Transfer (Net-Banking)\nNEFT\nRTGS\nCash\nCredit Card\nOther UPI\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "receipt",
+   "fieldtype": "Attach Image",
+   "label": "Receipt"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 17:39:53.993342",
+ "modified_by": "Administrator",
+ "module": "Expense Tracker",
+ "name": "Expense",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

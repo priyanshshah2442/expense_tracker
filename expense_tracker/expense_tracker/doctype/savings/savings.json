@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-16 11:03:07.110545",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_kg0t",
+  "field_of_savings",
+  "date",
+  "amount",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_kg0t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "field_of_savings",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Field of Savings",
+   "options": "Stocks\nReal Estate\nFD\nSIP\nMutual Fund\nELSS\nPPF\nEPF\nGold\nSilver\nBond\nDebt"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-18 12:57:23.777194",
+ "modified_by": "Administrator",
+ "module": "Expense Tracker",
+ "name": "Savings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

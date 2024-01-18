@@ -1,0 +1,28 @@
+.chart-holder {
+    width: 500px;
+    /* margin: auto */
+    margin: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+.number-card-holder{
+    display: flex;
+    gap:20px;
+}
+.number-card{
+    width: 200px;
+    height: 100px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.chart-container{
+    display: flex;
+    flex-wrap: wrap;
+}
