@@ -48,7 +48,10 @@ function App() {
 
 					<div>
 						<Navbar />
+<<<<<<< HEAD
 						<div className="container text-center">Expense Tracker</div>
+=======
+>>>>>>> 28cdd4f61f5ad617a08460f4a173c2a62871b542
 						<div className="container mt-4 row ms-4">
 							
 								<input type="month" max={maxDate} value={`${selectedYear}-${selectedMonth}`} onChange={handleMonthYearChange} />
