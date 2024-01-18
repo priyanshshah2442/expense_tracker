@@ -1,0 +1,32 @@
+{
+ "chart_name": "Report Chart",
+ "chart_type": "Report",
+ "creation": "2024-01-08 18:07:27.078564",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 1,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2024-01-09 16:57:54.416299",
+ "modified_by": "Administrator",
+ "module": "Expense Tracker",
+ "name": "Report Chart",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Spending Report",
+ "roles": [],
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Pie",
+ "use_report_chart": 0,
+ "x_field": "expense_type",
+ "y_axis": [
+  {
+   "y_field": "amount"
+  }
+ ]
+}

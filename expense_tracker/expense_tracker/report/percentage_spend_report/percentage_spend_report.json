@@ -1,0 +1,23 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-01-16 19:01:22.986270",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-01-17 11:37:09.957197",
+ "modified_by": "Administrator",
+ "module": "Expense Tracker",
+ "name": "Percentage Spend Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \n    Month(date) as `Month`,\n    Year(date) as `Year`,\n    expense_type, \n    SUM(amount) as total_amount,\n    ROUND((SUM(amount) / SUM(SUM(amount)) OVER (PARTITION BY MONTH(date), YEAR(date))) * 100, 2) as percentage_spending\nFROM \n    `tabExpense`\nGROUP BY \n    `expense_type`,\n     MONTH(date),\n     YEAR(date)\nORDER BY \n     Year desc ,\n     Month desc;\n    ",
+ "ref_doctype": "Expense",
+ "report_name": "Percentage Spend Report",
+ "report_type": "Query Report",
+ "roles": []
+}

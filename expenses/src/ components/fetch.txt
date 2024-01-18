@@ -1,0 +1,49 @@
+ const fetchData=async()=>{
+
+      const reportName = "Spending Report";
+      const filters = {
+        expense_type: "Housing"
+      };
+      const ignorePreparedReport = false;
+      const areDefaultFilters = false;
+      const timestamp = Date.now();
+      const url = "http://expense.localhost:8000/api/method/frappe.desk.query_report.run";
+
+      const queryParams = new URLSearchParams({
+        report_name: reportName,
+        filters: JSON.stringify(filters),
+        ignore_prepared_report: ignorePreparedReport,
+        are_default_filters: areDefaultFilters,
+        _: timestamp
+      });
+
+
+      const fullUrl = `${url}?${queryParams}`;
+
+      // const cookies = {
+      //   "user_image": "",
+      //   "sid": "87a38be0d682a653bb122ec82c78c94dd918ae0aa2a32f1acf90906d",
+      //   "system_user": "yes",
+      //   "full_name": "Administrator",
+      //   "user_id": "Administrator"
+      // };
+
+      
+
+      const headers= {
+        "Content-Type": 'application/json',
+        'Authorization': 'token 1438e764b298bac:ecd354c945dd9ba'
+    }
+
+    // headers["Cookie"] = Object.entries(cookies).map(([key, value]) => `${key}=${value}`).join("; ");
+
+      const resp=await axios.get(fullUrl, {
+        headers: headers,
+        withCredentials: true, // Include credentials for cookie authentication
+      })
+
+
+    console.log(resp.data.message.columns)
+    console.log(resp.data.message.result)
+    }
+    fetchData()
